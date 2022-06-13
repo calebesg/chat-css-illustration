@@ -1,0 +1,116 @@
+:root {
+  --violet-100: hsl(270, 20%, 96%);
+  --violet-200: hsl(276, 100%, 81%);
+  --violet-400: hsl(264, 100%, 61%);
+  --violet-600: hsl(276, 55%, 52%);
+
+  --violet-700: hsl(271, 15%, 43%);
+  --violet-800: hsl(271, 36%, 24%);
+
+  --magenta-400: hsl(289, 100%, 72%);
+  --magenta-500: hsl(293, 100%, 63%);
+
+  --grayish-blue-100: hsl(206, 6%, 79%);
+  --grayish-blue-200: hsl(270, 7%, 64%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 824px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.c-iphone {
+  background-color: white;
+  padding: 0.625rem;
+  border-radius: 2rem;
+  min-width: 248px;
+  height: 505px;
+  box-shadow: 20px 20px 40px var(--grayish-blue-100);
+}
+
+.c-iphone__display {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.c-header {
+  position: relative;
+  background: linear-gradient(to right, var(--violet-400), var(--magenta-500));
+  padding: 2rem 1rem 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.c-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 130px;
+  height: 20px;
+  background-color: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transform: translateX(-50%);
+}
+
+.c-header__contact {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.c-header__contact .avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.c-header__contact figcaption {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-header__contact .fullname {
+  font-size: 12px;
+}
+
+.c-header__contact .available {
+  font-size: 9px;
+  color: var(--grayish-blue-100);
+}
+
+.c-header i {
+  color: white;
+}
+
+.c-content {
+  flex: 1 1 auto;
+  background-color: var(--violet-100);
+}
