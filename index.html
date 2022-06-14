@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
@@ -27,7 +27,7 @@
       <div class="c-iphone">
         <div class="c-iphone__display">
           <header class="c-header">
-            <i class="icon ion-md-arrow-back"></i>
+            <i class="icon ion-chevron-left"></i>
             <figure class="c-header__contact">
               <img
                 class="avatar"
@@ -39,7 +39,7 @@
                 <span class="available">Available to Walk</span>
               </figcaption>
             </figure>
-            <i class="icon ion-md-more"></i>
+            <i class="icon ion-android-more-vertical"></i>
           </header>
           <div class="c-content">
             <div class="c-content--left">
@@ -69,9 +69,11 @@
                 I take her out for?
               </p>
               <p class="c-content__payment">
-                30 minute walk <strong>$29</strong>
+                <span>30 minute walk</span><strong>$29</strong>
               </p>
-              <p class="c-content__payment">1 hour walk <strong>$49</strong></p>
+              <p class="c-content__payment">
+                <span>1 hour walk</span><strong>$49</strong>
+              </p>
             </div>
           </div>
           <footer class="c-footer">
@@ -81,7 +83,9 @@
                 placeholder="Type a message..."
                 aria-label="enter you message"
               />
-              <button type="submit" aria-label="Submit button">></button>
+              <button type="submit" aria-label="Submit button">
+                <i class="icon ion-chevron-right"></i>
+              </button>
             </form>
           </footer>
         </div>
