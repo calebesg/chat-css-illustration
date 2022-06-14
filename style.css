@@ -29,13 +29,42 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 80vh;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  top: 0;
+  left: 0;
+  transform: translateX(-10%);
+  background: linear-gradient(45deg, var(--violet-400), var(--magenta-500));
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 80vh;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  bottom: 0;
+  right: 0;
+  transform: translateX(10%);
+  background: var(--violet-100);
+  z-index: -1;
 }
 
 main {
   max-width: 51.5rem;
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 7rem;
 }
 
 .c-iphone {
@@ -251,7 +280,24 @@ main {
   color: white;
 }
 
-@media (max-width: 625px) {
+.c-about {
+  max-width: 28.125rem;
+}
+
+.c-about h1 {
+  color: var(--violet-800);
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.c-about p {
+  margin-top: 1.5rem;
+  color: var(--grayish-blue-200);
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+@media (max-width: 39.0625rem) {
   main {
     flex-direction: column;
   }
