@@ -179,3 +179,39 @@ main {
   font-size: 10px;
   color: white;
 }
+
+/* FOOTER =================================== */
+.c-footer {
+  padding: 0 8px 8px;
+}
+
+.c-footer__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 34px;
+  border-radius: 17px;
+  padding: 0 8px;
+}
+
+.c-footer__form input {
+  flex: 1 1 auto;
+  border: none;
+  font-size: 12px;
+  padding: 0 8px;
+  outline: none;
+}
+
+.c-footer__form input::placeholder {
+  color: var(--grayish-blue-100);
+}
+
+.c-footer__form button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--violet-800);
+  color: white;
+}
