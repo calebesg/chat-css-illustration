@@ -32,7 +32,7 @@ body {
 }
 
 main {
-  max-width: 824px;
+  max-width: 51.5rem;
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -42,19 +42,17 @@ main {
   background-color: white;
   padding: 0.625rem;
   border-radius: 2rem;
-  min-width: 248px;
-  height: 510px;
-  box-shadow: 20px 20px 40px var(--grayish-blue-100);
+  min-width: 15.625rem;
+  max-width: 15.625rem;
+  box-shadow: 1.25rem 1.25rem 2.5rem hsla(206, 7%, 79%, 0.4);
 }
 
 .c-iphone__display {
-  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   border-radius: 1.5rem;
   overflow: hidden;
-  /* background-color: var(--violet-100); */
   background: radial-gradient(hsla(276, 100%, 81%, 0.3) 5%, transparent 16%) 0 0;
   background-color: var(--violet-100);
   background-size: 1rem 1rem;
@@ -63,14 +61,14 @@ main {
 .c-header {
   position: relative;
   background: linear-gradient(to right, var(--violet-400), var(--magenta-500));
-  padding: 2rem 1rem 10px;
+  padding: 2rem 1rem 0.625rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  gap: 0.5rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .c-header::before {
@@ -78,23 +76,23 @@ main {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 130px;
-  height: 20px;
+  width: 8.125rem;
+  height: 1.25rem;
   background-color: white;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0.875rem;
+  border-bottom-right-radius: 0.875rem;
   transform: translateX(-50%);
 }
 
 .c-header i:first-of-type {
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .c-header__contact {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   color: white;
 }
 
@@ -111,12 +109,15 @@ main {
 }
 
 .c-header__contact .fullname {
-  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 .c-header__contact .available {
-  font-size: 9px;
-  color: var(--grayish-blue-100);
+  font-size: 0.5rem;
+  margin-top: 0.125rem;
+  opacity: 0.6;
 }
 
 .c-header i {
@@ -129,26 +130,26 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .c-content--left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .c-content__message {
-  padding: 8px;
-  border-radius: 10px;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
   max-width: 68%;
-  font-size: 9px;
+  font-size: 0.5625rem;
 }
 
 .c-content--left .c-content__message {
   background-color: var(--grayish-blue-300);
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 0.25rem;
   color: var(--violet-600);
 }
 
@@ -156,56 +157,66 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .c-content--right .c-content__message {
   background-color: white;
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 0.25rem;
   color: var(--violet-700);
-  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0.125rem 0.625rem 0.5rem rgba(0, 0, 0, 0.04);
 }
 
 .c-content__gallery {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
-  height: 40px;
+  gap: 0.625rem;
+  height: 2.5rem;
+}
+
+.c-content__gallery li {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
 }
 
 .c-content__gallery img {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 100%;
 }
 
 .c-content__payment {
   width: 80%;
-  border-radius: 10px;
-  border-bottom-left-radius: 4px;
-  padding: 10px 16px 10px 8px;
+  border-radius: 0.75rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.625rem 1rem 0.625rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   background: linear-gradient(to right, var(--magenta-500), var(--violet-400));
-  font-size: 9px;
   color: white;
 }
 
+.c-content__payment i {
+  opacity: 0.4;
+}
+
 .c-content__payment span {
-  color: var(--grayish-blue-300);
+  flex: 1 1 auto;
+  font-size: 0.5625rem;
+  opacity: 0.8;
 }
 
 .c-content__payment strong {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 /* FOOTER =================================== */
 .c-footer {
-  padding: 0 8px 8px;
-  position: absolute;
-  bottom: 0;
+  padding: 0.25rem 0.5rem 0.5rem;
+  width: 100%;
 }
 
 .c-footer__form {
@@ -213,17 +224,17 @@ main {
   display: flex;
   align-items: center;
   background-color: white;
-  height: 34px;
-  border-radius: 17px;
-  padding: 0 8px;
-  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.04);
+  height: 2.125rem;
+  border-radius: 1.0625rem;
+  padding: 0 0.5rem;
+  box-shadow: 0.125rem 0.625rem 0.5rem rgba(0, 0, 0, 0.04);
 }
 
 .c-footer__form input {
   flex: 1 1 auto;
   border: none;
-  font-size: 12px;
-  padding: 0 8px;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
   outline: none;
 }
 
@@ -238,4 +249,10 @@ main {
   border: none;
   background-color: var(--violet-800);
   color: white;
+}
+
+@media (max-width: 625px) {
+  main {
+    flex-direction: column;
+  }
 }
