@@ -35,44 +35,44 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
+  gap: 7.75rem;
 }
 
-main::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 80vh;
-  border-bottom-left-radius: 200px;
-  border-bottom-right-radius: 200px;
-  top: 0;
-  left: 0;
-  transform: translateX(-10%);
-  background: linear-gradient(45deg, var(--violet-400), var(--magenta-500));
-  z-index: -1;
-}
-
+main::before,
 main::after {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 80vh;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-  bottom: 0;
-  right: 0;
-  transform: translateX(10%);
-  background: var(--violet-100);
+  width: 29.375rem;
+  height: 43.75rem;
   z-index: -1;
 }
 
+main::before {
+  border-bottom-left-radius: 14.0625rem;
+  border-bottom-right-radius: 14.0625rem;
+  top: 0;
+  left: 0;
+  transform: translateX(-3.25rem);
+  background: linear-gradient(45deg, var(--violet-400), var(--magenta-500));
+}
+
+main::after {
+  border-top-left-radius: 14.0625rem;
+  border-top-right-radius: 14.0625rem;
+  bottom: 0;
+  right: 0;
+  transform: translateX(30%);
+  background: var(--violet-100);
+}
+
 .c-iphone {
+  margin-left: 6.25rem;
   background-color: white;
   padding: 0.625rem;
   border-radius: 2rem;
   min-width: 15.625rem;
   max-width: 15.625rem;
-  box-shadow: 1.25rem 1.25rem 2.5rem hsla(206, 7%, 79%, 0.4);
+  box-shadow: 1.25rem 1.25rem 2.5rem hsla(206, 7%, 79%, 0.5);
 }
 
 .c-iphone__display {
@@ -296,19 +296,25 @@ main::after {
   line-height: 1.75rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
   main {
     flex-direction: column;
-    padding: 4rem 38px;
+    padding: 4rem 2.375rem;
     text-align: center;
     gap: 4rem;
   }
 
   main::before {
-    transform: translateX(-55%);
+    height: 31.25rem;
+    transform: translateX(-60%);
   }
 
   main::after {
-    transform: translateX(55%);
+    height: 31.25rem;
+    transform: translateX(60%);
+  }
+
+  .c-iphone {
+    margin-left: 0;
   }
 }
