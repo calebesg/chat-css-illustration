@@ -51,18 +51,18 @@ main::before {
   border-bottom-left-radius: 14.0625rem;
   border-bottom-right-radius: 14.0625rem;
   top: 0;
-  left: 0;
-  transform: translateX(-3.25rem);
+  left: -3.25rem;
   background: linear-gradient(45deg, var(--violet-400), var(--magenta-500));
+  animation: top-to-down 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 main::after {
   border-top-left-radius: 14.0625rem;
   border-top-right-radius: 14.0625rem;
   bottom: 0;
-  right: 0;
-  transform: translateX(30%);
+  right: -9rem;
   background: var(--violet-100);
+  animation: down-to-top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .c-iphone {
@@ -73,6 +73,7 @@ main::after {
   min-width: 15.625rem;
   max-width: 15.625rem;
   box-shadow: 1.25rem 1.25rem 2.5rem hsla(206, 7%, 79%, 0.5);
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both 0.8s;
 }
 
 .c-iphone__display {
@@ -281,6 +282,7 @@ main::after {
 
 .c-about {
   max-width: 28.125rem;
+  animation: opacity 1s linear;
 }
 
 .c-about h1 {
@@ -307,14 +309,70 @@ main::after {
   main::before {
     height: 31.25rem;
     transform: translateX(-60%);
+    animation: none;
   }
 
   main::after {
     height: 31.25rem;
     transform: translateX(60%);
+    animation: none;
   }
 
   .c-iphone {
     margin-left: 0;
+  }
+}
+
+@keyframes top-to-down {
+  from {
+    transform: translateY(-700px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes down-to-top {
+  from {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
