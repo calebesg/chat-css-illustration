@@ -25,14 +25,20 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
   background-color: #fafafa;
+}
+
+main {
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  gap: 7rem;
 }
 
-body::before {
+main::before {
   content: "";
   position: absolute;
   width: 400px;
@@ -46,7 +52,7 @@ body::before {
   z-index: -1;
 }
 
-body::after {
+main::after {
   content: "";
   position: absolute;
   width: 400px;
@@ -58,13 +64,6 @@ body::after {
   transform: translateX(10%);
   background: var(--violet-100);
   z-index: -1;
-}
-
-main {
-  max-width: 51.5rem;
-  display: flex;
-  align-items: center;
-  gap: 7rem;
 }
 
 .c-iphone {
@@ -297,8 +296,19 @@ main {
   line-height: 1.75rem;
 }
 
-@media (max-width: 39.0625rem) {
+@media (max-width: 800px) {
   main {
     flex-direction: column;
+    padding: 4rem 38px;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  main::before {
+    transform: translateX(-55%);
+  }
+
+  main::after {
+    transform: translateX(55%);
   }
 }
